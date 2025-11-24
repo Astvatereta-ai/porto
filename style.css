@@ -1,13 +1,4 @@
-/*
-  Global styles for the hotel booking website. This stylesheet defines
-  CSS variables for the color palette and common design tokens. A
-  mobile‑first approach is used to create a responsive layout that
-  scales gracefully on larger screens. Class names favor semantic
-  naming over framework-specific conventions, making the markup easy
-  to read and maintain. Animations, shadows and transitions are kept
-  subtle to maintain a polished, professional look reminiscent of
-  modern travel platforms.
-*/
+
 
 /* Reset and base styles */
 *, *::before, *::after {
