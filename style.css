@@ -1,6 +1,6 @@
 
 
-/* Reset and base styles */
+/* Reset an base styles */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
