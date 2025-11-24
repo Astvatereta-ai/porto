@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard – Triply</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="assets/data/hotels.js"></script>
+    <script defer src="assets/data/languages.js"></script>
+    <script defer src="assets/script.js"></script>
+  </head>
+  <body id="dashboard">
+    <header>
+      <div class="container nav">
+        <a href="index.html" class="nav-logo">Triply</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links">
+          <a href="index.html" class="t" data-key="home">Home</a>
+          <a href="listings.html" class="t" data-key="hotels">Hotels</a>
+          <a href="login.html" class="t" data-key="login">Login</a>
+          <a href="dashboard.html" class="t" data-key="dashboard">Dashboard</a>
+          <a href="admin.html" class="t" data-key="admin_panel">Admin</a>
+        </nav>
+        <div class="lang-select">
+          <select id="lang-select" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="id">ID</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="dashboard-wrapper">
+        <h2 class="t" data-key="dashboard"></h2>
+        <p><strong id="userName"></strong></p>
+        <div id="bookingList"></div>
+        <button id="logout" class="btn secondary t" data-key="log_out"></button>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Triply. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

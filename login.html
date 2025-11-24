@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register – Triply</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="assets/data/hotels.js"></script>
+    <script defer src="assets/data/languages.js"></script>
+    <script defer src="assets/script.js"></script>
+  </head>
+  <body id="auth">
+    <header>
+      <div class="container nav">
+        <a href="index.html" class="nav-logo">Triply</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links">
+          <a href="index.html" class="t" data-key="home">Home</a>
+          <a href="listings.html" class="t" data-key="hotels">Hotels</a>
+          <a href="login.html" class="t" data-key="login">Login</a>
+          <a href="dashboard.html" class="t" data-key="dashboard">Dashboard</a>
+          <a href="admin.html" class="t" data-key="admin_panel">Admin</a>
+        </nav>
+        <div class="lang-select">
+          <select id="lang-select" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="id">ID</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="auth-wrapper">
+        <h2 class="t" data-key="login"></h2>
+        <form id="loginForm">
+          <div class="field">
+            <label class="t" data-key="username" for="loginUsername"></label>
+            <input type="text" id="loginUsername" required />
+          </div>
+          <div class="field">
+            <label class="t" data-key="password" for="loginPassword"></label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <button type="submit" class="btn primary t" data-key="login"></button>
+        </form>
+        <div class="switch">
+          <a href="#" id="switchToRegister">Don't have an account? Register</a>
+        </div>
+        <form id="registerForm" style="margin-top: 2rem">
+          <h2 class="t" data-key="register"></h2>
+          <div class="field">
+            <label class="t" data-key="full_name" for="regFullName"></label>
+            <input type="text" id="regFullName" required />
+          </div>
+          <div class="field">
+            <label class="t" data-key="username" for="regUsername"></label>
+            <input type="text" id="regUsername" required />
+          </div>
+          <div class="field">
+            <label class="t" data-key="password" for="regPassword"></label>
+            <input type="password" id="regPassword" required />
+          </div>
+          <div class="field">
+            <label class="t" data-key="email" for="regEmail"></label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <button type="submit" class="btn primary t" data-key="register"></button>
+        </form>
+        <div class="switch">
+          <a href="#" id="switchToLogin">Already have an account? Login</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Triply. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

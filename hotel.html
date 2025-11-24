@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Details – Triply</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="assets/data/hotels.js"></script>
+    <script defer src="assets/data/languages.js"></script>
+    <script defer src="assets/script.js"></script>
+  </head>
+  <body id="hotel-detail">
+    <header>
+      <div class="container nav">
+        <a href="index.html" class="nav-logo">Triply</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links">
+          <a href="index.html" class="t" data-key="home">Home</a>
+          <a href="listings.html" class="t" data-key="hotels">Hotels</a>
+          <a href="login.html" class="t" data-key="login">Login</a>
+          <a href="dashboard.html" class="t" data-key="dashboard">Dashboard</a>
+          <a href="admin.html" class="t" data-key="admin_panel">Admin</a>
+        </nav>
+        <div class="lang-select">
+          <select id="lang-select" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="id">ID</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container detail">
+          <!-- Gallery -->
+          <div>
+            <div class="gallery" id="gallery"></div>
+          </div>
+          <!-- Info -->
+          <div>
+            <h2 id="hotelName"></h2>
+            <p id="hotelLocation" class="muted"></p>
+            <div id="hotelRating" class="stars" style="margin-bottom: 1rem"></div>
+            <p id="hotelDescription"></p>
+            <div class="amenities">
+              <h3 class="t" data-key="amenities"></h3>
+              <ul id="amenities"></ul>
+            </div>
+            <div class="room-types">
+              <h3 class="t" data-key="room_types"></h3>
+              <div id="roomList"></div>
+            </div>
+            <div class="reviews">
+              <h3 class="t" data-key="reviews"></h3>
+              <div id="reviews"></div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section" style="margin-top: 2rem">
+              <h3 class="t" data-key="location_map"></h3>
+              <div id="mapContainer" style="height: 300px; border: 1px solid var(--border); border-radius: var(--radius); background: #e5e7eb; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; color: var(--muted);"></div>
+            </div>
+
+            <!-- Review Form -->
+            <div class="review-form" id="reviewSection" style="margin-top: 2rem">
+              <h3 class="t" data-key="add_review"></h3>
+              <form id="reviewForm">
+                <div class="field" style="margin-bottom: 0.5rem">
+                  <label for="reviewRating" class="t" data-key="rating_label"></label>
+                  <select id="reviewRating">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+                <div class="field" style="margin-bottom: 0.5rem">
+                  <label for="reviewComment" class="t" data-key="comment_label"></label>
+                  <textarea id="reviewComment" rows="3" style="width: 100%; padding: 0.4rem; border-radius: var(--radius); border: 1px solid var(--border);"></textarea>
+                </div>
+                <button type="submit" class="btn primary t" data-key="submit_review"></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Triply. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
